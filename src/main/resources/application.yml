@@ -1,0 +1,9 @@
+mrbird:
+  blog:
+    name: mrbird's blog
+    title: Spring Boot
+    wholeTitle: ${mrbird.blog.name}--${mrbird.blog.title}
+spring:
+  profiles:
+    active: dev
+#    spring changyong peizhi
