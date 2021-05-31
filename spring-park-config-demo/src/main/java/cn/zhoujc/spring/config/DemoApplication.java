@@ -11,7 +11,10 @@ public class DemoApplication {
 
     /**
      * PID （process id） 进程（时间，空间） 线程 (最小的计算单元)
+     *
      * Tomcat 是一个 servlet 容器，10 service
+     * 一个广泛使用的Java web应用服务器
+     *
      * servlet，service + applet
      * Context：上下文
      * 网络协议，七层网络协议，Http 协议 的知识，阮一峰
