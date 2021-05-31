@@ -1,15 +1,9 @@
-package com.springboot;
+package com.springboot.mapper;
 
 
-import com.springboot.Student;
+import com.springboot.entity.Student;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 @Component
 @Mapper
@@ -21,21 +15,15 @@ public interface StudentMapper {
     int update(Student student);
 
     @Delete("delete from student where sno=#{sno}")
-    int deleteByson(String son);
+    int deleteBySno(String son);
 
     @Select("select * from student where sno=#{sno}")
-
-
     @Results(id = "student",value={
             @Result(property = "son", column = "son", javaType = String.class),
             @Result(property = "name", column = "name", javaType = String.class),
             @Result(property = "sex", column = "sex", javaType = String.class)
     })
-    Student queryStudentBySon(String son);
+    Student queryStudentBySno(String son);
 
-
-    int deleteBySno(String sno);
-
-    Student queryStudentBySno(String sno);
 }
 

@@ -1,13 +1,14 @@
 package com.springboot.service.impl;
 
+import com.springboot.entity.Student;
+import com.springboot.mapper.StudentMapper;
+import com.springboot.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springboot.Student;
-import com.springboot.StudentMapper;
 
 @Service("studentService")
-public class StudentServiceImp implements StudentService{
+public class StudentServiceImp implements StudentService {
 
     @Autowired
     private StudentMapper studentMapper;
