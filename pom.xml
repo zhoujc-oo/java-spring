@@ -11,6 +11,7 @@
     <modules>
         <module>spring-park-config-demo</module>
         <module>spring-book-mybatis</module>
+        <module>spring-book-jdbctemplate</module>
     </modules>
 
     <parent>
