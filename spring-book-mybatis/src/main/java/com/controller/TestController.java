@@ -1,7 +1,7 @@
-package com.springboot.controller;
+package com.controller;
 
-import com.springboot.entity.Student;
-import com.springboot.service.StudentService;
+import com.entity.Student;
+import com.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
+    /**
+     * DI, IOC
+     *
+     */
     @Autowired
     private StudentService studentService;
 

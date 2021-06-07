@@ -1,7 +1,7 @@
-package com.springboot.service;
+package com.service;
 
 
-import com.springboot.entity.Student;
+import com.entity.Student;
 
 public interface StudentService {
     /**
@@ -9,7 +9,7 @@ public interface StudentService {
      * @param student
      * @return
      */
-    int add(Student student);
+    int add(Student student) throws ClassNotFoundException;
     int update(Student student);
     int deleteBySno(String sno);
     Student queryStudentBySno(String sno);
