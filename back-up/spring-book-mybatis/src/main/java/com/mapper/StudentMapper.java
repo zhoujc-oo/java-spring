@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 @Mapper
 public interface StudentMapper {
     // CURD, create, Update, Read, Delete  bean
-    @Insert("insert into student(s_no, s_name, s_sex,s_phone) " +
-            "values(#{son},#{name},#{sex},#{phone},#{address})")
+    @Insert("insert into student(s_no, s_name, s_sex) values(#{son},#{name},#{sex})")
     int add(Student student);
 
     @Update("update student set s_name=#{name},s_sex=#{sex} where s_no=#{sno}")
@@ -23,9 +22,7 @@ public interface StudentMapper {
     @Results(id = "student",value={
             @Result(property = "son", column = "s_on", javaType = String.class),
             @Result(property = "name", column = "s_name", javaType = String.class),
-            @Result(property = "sex", column = "s_sex", javaType = String.class),
-            @Result(property = "phone", column = "s_phone",javaType = String.class),
-            @Result(property = "address", column = "s_address",javaType = String.class)
+            @Result(property = "sex", column = "s_sex", javaType = String.class)
     })
     Student queryStudentBySno(String son);
 

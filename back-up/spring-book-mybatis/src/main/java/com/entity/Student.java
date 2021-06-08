@@ -8,8 +8,6 @@ public class Student implements Serializable {
     private String sno;
     private String name;
     private String sex;
-    private String phone;
-    private String address;
 
     public String getSno() {
         return sno;
@@ -34,12 +32,4 @@ public class Student implements Serializable {
     public void setSex(String sex) {
         this.sex = sex;
     }
-
-    public String getSon(){ return phone;}
-
-    public void setPhone(String phone){this.phone = phone;}
-
-    public String getAddress(){return address;}
-
-    public void setAddress(String address){this.address = address;}
 }
