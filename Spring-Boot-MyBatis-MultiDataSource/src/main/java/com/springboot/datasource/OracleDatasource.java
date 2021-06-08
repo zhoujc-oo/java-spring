@@ -40,7 +40,6 @@ public class OracleDatasource {
             throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        //如果不使用xml的方式配置mapper，则可以省去下面这行mapper location的配置。
         sessionFactory.setMapperLocations(
                 new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION));
         return sessionFactory.getObject();
