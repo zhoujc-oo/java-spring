@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"> <!--约束文件的路径-->
+
+
+    <!--告诉 spring 创建对象
+           声明 dean ，就是告诉 spring 要创建某个类的对象
+           id：对象的自定义名称，唯一值， spring 通过这个名称找到对象
+           class：类的全限名称（不能是接口，因为 spring 是反射机制  创建对象，必须使用类
+           -->
+
+    <!--这个就是完成了一个 SomeService someService = new SomeService();
+     spring 是把创建好的对象放入到 map 中，spring 框架有一个 map 存放对象的。
+     springMap.put(id的值, 对象);
+     例如 springMap。put（"someService”, new SomeServiceImpl());
+     一个 bean 标签只能声明一个对象。
+     -->
+    <bean id="someService" class="com.zhoujc.service.Impl.SomeServiceImpl" />
+</beans>
+    <!--
+        spring 的配置文件
+        1.beans ：是跟标签， spring 把 java 对象成为 bean。
+        2.spring-bean.xsd 是约束文件，和 mybatis指定 dtd 是一样的。
+        -->
