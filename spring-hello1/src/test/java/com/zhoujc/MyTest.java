@@ -2,9 +2,11 @@ package com.zhoujc;
 
 import com.zhoujc.service.Impl.SomeServiceImpl;
 import com.zhoujc.service.SomeService;
-import org.apache.catalina.core.ApplicationContext;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+
 
 public class MyTest {
     @Test
@@ -21,7 +23,7 @@ public class MyTest {
         String config = "beans.xml";
         //2.创建表示 spring 的容器对象，ApplicationContext
         //classPathXmlApplicationContext 表示从路径中加载 spring 的配置文件
-        ApplicationContext ac = new ClassPathXmlApplicationContext(config);
+        ApplicationContext ac = new ClassPathXmlApplicationContext("config");
 
         //从容器中获取某个对象，调用对象的方法
         //getBean（“配置文件中 bean 的id值”）
@@ -29,6 +31,7 @@ public class MyTest {
 
         //通过名字来使用对象
         //使用 spring 创建好的对象
+        System.out.println();
         service.doSome();
     }
 

@@ -1,30 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>spring-park</artifactId>
         <groupId>cn.zhoujc</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-<!--    <properties>-->
-<!--                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--                <maven.compiler.source>1.8</maven.compiler.source>-->
-<!--                <maven.compiler.target>1.8</maven.compiler.target>-->
-<!--    <properties/>-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-hello1</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-hello1</artifactId>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.1.8.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>tps</finalName>
+    </build>
 
 
 </project>
