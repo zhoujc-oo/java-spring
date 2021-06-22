@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.zhoujc.pojo.Address">
+        <property name="address" value="hf"/>
+    </bean>
+    <bean id="student" class="com.zhoujc.pojo.Student">
+        <!-- 普通注入  -->
+        <property name="name" value="单子健"/>
+        <!-- Bean注入 -->
+        <property name="address" ref="address"/>
+        <!--数组-->
+        <property name="books">
+            <array>
+                <value>水浒传</value>
+                <value>红楼梦</value>
+            </array>
+        </property>
+        <!-- List -->
+        <property name="hobbies">
+            <list>
+                <value>打篮球</value>
+                <value>跑步</value>
+            </list>
+        </property>
+        <!-- Map -->
+        <property name="card">
+            <map>
+                <entry key="银行卡" value="62132"/>
+                <entry key="身份证" value="345234"/>
+            </map>
+        </property>
+        <!--Set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>CSGO</value>
+            </set>
+        </property>
+        <!-- property -->
+        <property name="info">
+            <props>
+                <prop key="性别">男</prop>
+                <prop key="年龄">18</prop>
+            </props>
+        </property>
+        <!-- NULL -->
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+
+</beans>
