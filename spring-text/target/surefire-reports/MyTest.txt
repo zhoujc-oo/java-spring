@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: MyTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.415 s <<< FAILURE! - in MyTest
+test1(MyTest)  Time elapsed: 0.369 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'name' defined in class path resource [beans.xml]: Initialization of bean failed; nested exception is org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'com.zhoujc.automatic_assembly.Cat' for property 'cat'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'com.zhoujc.automatic_assembly.Cat' for property 'cat': no matching editors or conversion strategy found
+	at MyTest.test1(MyTest.java:10)
+Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'com.zhoujc.automatic_assembly.Cat' for property 'cat'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'com.zhoujc.automatic_assembly.Cat' for property 'cat': no matching editors or conversion strategy found
+	at MyTest.test1(MyTest.java:10)
+Caused by: java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'com.zhoujc.automatic_assembly.Cat' for property 'cat': no matching editors or conversion strategy found
+	at MyTest.test1(MyTest.java:10)
+
